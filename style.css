@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body {
+    background: linear-gradient(to bottom, hsl(25, 70%, 80%) 30%, hsl(20, 60%, 70%) 45%, #FFFFFF 60%);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: black;
+    padding: 20px;
+    background-size: 300% 700%;
+    animation: gradientAnimation 6s ease infinite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive; /* Handwriting Font */
+    font-weight: 700;
+    font-size: 4rem;
+    color: #222; /* Darker for contrast */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative; /* Keeps it aligned properly */
+    top: 0;
+}
+
+/* Search Form */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 18px;
+    font-size: 1rem;
+    border: 2px solid #228B22;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+input[type="text"]::placeholder {
+    color: #555; /* Change this to any color you want */
+    opacity: 1; /* Ensures full visibility */
+    font-style: italic; /* Optional: makes it look stylish */
+}
+
+
+input[type="text"]:focus {
+    border-color: #006400;
+    box-shadow: 0px 0px 8px rgba(34, 139, 34, 0.5);
+}
+
+button {
+    padding: 20px 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: #228B22;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #006400;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* #show-more-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    display: none;
+} */
+/* Masonry Grid Layout */
+/* Masonry Layout using CSS Columns */
+#search-result {
+    column-count: 3; /* 3 columns */
+    column-gap: 15px; /* Space between columns */
+    padding: 20px;
+    max-width: 1200px; /* Limits width */
+    margin: 0 auto;
+}
+
+/* Styling for each image container */
+.image-item {
+    display: inline-block; /* Ensures proper column flow */
+    width: 100%; /* Fit column width */
+    margin-bottom: 15px; /* Space between rows */
+    break-inside: avoid; /* Prevent breaking inside columns */
+}
+
+/* Image styling */
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.image-item img:hover {
+    transform: scale(1.05);
+}
